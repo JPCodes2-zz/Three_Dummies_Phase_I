@@ -14,9 +14,10 @@ namespace Dummy1.API.Controllers
     {
         private readonly IChat chat;
 
-        public ChatController()
+        public ChatController(IChat _chat)
         {
-            chat = new Chat();
+            //chat = new Chat();
+            chat = _chat;
         }
 
         [HttpGet]
