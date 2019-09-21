@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Dummy1.API.Models;
-using Dummy1.API.Repository;
-using Dummy1.API.Services;
-using Microsoft.AspNetCore.Http;
+using Dummy2.API.Models;
+using Dummy2.API.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Dummy1.API.Controllers
+// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+namespace Dummy2.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ChatController : ControllerBase
+    public class Dummy2ChatController : ControllerBase
     {
         private readonly IMessageRepository messageRepository;
 
-        public ChatController( IMessageRepository _messageRepository)
+        public Dummy2ChatController(IMessageRepository _messageRepository)
         {
             messageRepository = _messageRepository;
         }
@@ -24,7 +24,7 @@ namespace Dummy1.API.Controllers
         [HttpGet]
         public ActionResult<string> Greet()
         {
-            return   "Hello World !!!";
+            return "Hello World !!!";
         }
 
         [HttpGet]
