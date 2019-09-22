@@ -31,7 +31,7 @@ namespace Dummy2.API.Controllers
         [Route("getall")]
         public ActionResult<List<Message>> GetAllMessages()
         {
-            return messageRepository.GetSent("Dummy1").ToList();
+            return messageRepository.GetSent("Dummy2").ToList();
         }
     }
 }

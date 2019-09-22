@@ -7,10 +7,10 @@ namespace Dummy1.API.Repository
 {
     public class MessageRepository: IMessageRepository
     {
-        MessagesLocalStorage dbx;
+        //MessagesLocalStorage dbx;
         public MessageRepository()
         {
-            dbx = new MessagesLocalStorage();
+            //dbx = new MessagesLocalStorage();
         }
 
         public void Delete(Guid id)
@@ -20,17 +20,17 @@ namespace Dummy1.API.Repository
 
         public Message Get(Guid Id)
         {
-           return dbx.Messages.Where(m => m.Id == Id).FirstOrDefault();
+           return MessagesLocalStorage.Messages.Where(m => m.Id == Id).FirstOrDefault();
         }
 
         public IEnumerable<Message> GetRecieved(string recieverId)
         {
-            return dbx.Messages.Where(m => m.RecieverId == recieverId).ToList();
+            return MessagesLocalStorage.Messages.Where(m => m.RecieverId == recieverId).ToList();
         }
 
         public IEnumerable<Message> GetSent(string senderId)
         {
-            return dbx.Messages.Where(m => m.SenderId == senderId).ToList();
+            return MessagesLocalStorage.Messages.Where(m => m.SenderId == senderId).ToList();
         }
 
         public void MarkRead(Guid id)
