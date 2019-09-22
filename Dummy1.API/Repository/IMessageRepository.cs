@@ -9,8 +9,8 @@ namespace Dummy1.API.Repository
         Message Get(Guid Id);
         IEnumerable<Message> GetSent(string senderId);
         IEnumerable<Message> GetRecieved(string recieverId);
-        bool Send(Message message);
-        bool Update(Guid id, Message message);
+        void Send(Message message);
+        void Update(Guid id, Message message);
         void Delete(Guid id);
         void MarkRead(Guid id);
     }

@@ -46,6 +46,15 @@ namespace Dummy1.API.Models
         }
 
         public void MarkAsRead()=>  IsRead = true;
+
+        public void Update(Message message)
+        {
+            this.IsRead = message.IsRead;
+            this.MessageText = message.MessageText;
+            this.RecieverId = message.RecieverId;
+            this.SenderId = message.SenderId;
+            this.TimeStamp = DateTime.Now;
+        }
         
     }
 }

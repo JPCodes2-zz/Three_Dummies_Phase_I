@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Dummy1.API.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Dummy1.API.Models;
 
 namespace Dummy1.API.Repository
 {
-    public class MessageRepository: IMessageRepository
+    public class MessageRepository : IMessageRepository
     {
         //MessagesLocalStorage dbx;
         public MessageRepository()
@@ -15,12 +15,12 @@ namespace Dummy1.API.Repository
 
         public void Delete(Guid id)
         {
-            throw new NotImplementedException();
+            MessagesLocalStorage.Delete(id);
         }
 
         public Message Get(Guid Id)
         {
-           return MessagesLocalStorage.Messages.Where(m => m.Id == Id).FirstOrDefault();
+            return MessagesLocalStorage.Messages.Where(m => m.Id == Id).FirstOrDefault();
         }
 
         public IEnumerable<Message> GetRecieved(string recieverId)
@@ -35,17 +35,17 @@ namespace Dummy1.API.Repository
 
         public void MarkRead(Guid id)
         {
-            throw new NotImplementedException();
+            MessagesLocalStorage.MarkAsRead(id);
         }
 
-        public bool Send(Message message)
+        public void Send(Message message)
         {
-            throw new NotImplementedException();
+            MessagesLocalStorage.Add(message);
         }
 
-        public bool Update(Guid id, Message message)
+        public void Update(Guid id, Message message)
         {
-            throw new NotImplementedException();
+            MessagesLocalStorage.Update(id, message);
         }
     }
 }
