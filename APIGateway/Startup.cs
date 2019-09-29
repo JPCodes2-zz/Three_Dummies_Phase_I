@@ -25,7 +25,7 @@ namespace APIGateway
                 app.UseDeveloperExceptionPage();
             }   
 
-            UriRouter router =new UriRouter("UriRouter.json");
+            UriRouter router =new UriRouter("UriRoutes.json");
 
             app.Run(async (context) =>
             {
