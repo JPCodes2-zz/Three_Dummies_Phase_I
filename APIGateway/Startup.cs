@@ -23,12 +23,19 @@ namespace APIGateway
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            }
+            }   
+
+            UriRouter router =new UriRouter("UriRouter.json");
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                var content = await router.RouteRequest(context.Request);
+                await context.Response.WriteAsync(await content.Content.ReadAsStringAsync());
+
+            //    await context.Response.WriteAsync("Hello World!");
             });
+
+
         }
     }
 }

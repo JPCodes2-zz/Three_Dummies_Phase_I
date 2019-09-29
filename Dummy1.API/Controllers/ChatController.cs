@@ -33,5 +33,14 @@ namespace Dummy1.API.Controllers
         {
             return messageRepository.GetSent("Dummy1").ToList();
         }
+
+        [HttpPost]
+        [Route("postmsg")]
+        public ActionResult SendMessage(Message message)
+        {
+            messageRepository.Send(message);
+
+            return Ok();
+        }
     }
 }

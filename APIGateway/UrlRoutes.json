@@ -1,0 +1,26 @@
+﻿{
+  "routes": [
+    {
+      "externalEndPoint": "dummy1Greet",
+      "internalEndPoint": {
+        "Uri": "http://localhost:5000/chat",
+        "IsAuthenticationRequired": false
+      }
+    },
+    {
+      "externalEndPoint": "dummy1getall",
+      "internalEndPoint": {
+        "Uri": "http://localhost:5000/chat/getall",
+        "IsAuthenticationRequired": false
+      }
+    },
+    {
+      "externalEndPoint": "dummy1post",
+      "internalEndPoint": {
+        "Uri": "http://localhost:5000/chat/post",
+        "IsAuthenticationRequired": false
+      }
+    }
+  ]
+}
+
