@@ -13,6 +13,8 @@ namespace APIGateway
 {
     public class UriRouter
     {
+        //source code courtecy
+        //https://medium.com/streamwriter/api-gateway-aspnet-core-a46ef259dc54
         public List<Route> Routes { get; set; }
 
         //TODO:: Add Authentication service and enable this feature

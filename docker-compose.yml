@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  dummy1.api:
+    image: ${DOCKER_REGISTRY-}dummy1api
+    build:
+      context: .
+      dockerfile: Dummy1.API/Dockerfile
+
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: APIGateway/Dockerfile
+
+

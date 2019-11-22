@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dummy2.API", "Dummy2.API\Du
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dummy3.API", "Dummy3.API\Dummy3.API.csproj", "{9487C644-D5BD-4754-90B5-8FB0B6D6B04E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway", "APIGateway\APIGateway.csproj", "{E7664B4A-A710-4E55-9CA1-CD16086BFF7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIGateway", "APIGateway\APIGateway.csproj", "{E7664B4A-A710-4E55-9CA1-CD16086BFF7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_UI", "MVC_UI\MVC_UI.csproj", "{F00D94F0-5033-4B50-B126-18D416853927}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC_UI", "MVC_UI\MVC_UI.csproj", "{F00D94F0-5033-4B50-B126-18D416853927}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{874417B1-E3AE-490D-BFDB-225F1B92AC02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{F00D94F0-5033-4B50-B126-18D416853927}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F00D94F0-5033-4B50-B126-18D416853927}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F00D94F0-5033-4B50-B126-18D416853927}.Release|Any CPU.Build.0 = Release|Any CPU
+		{874417B1-E3AE-490D-BFDB-225F1B92AC02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{874417B1-E3AE-490D-BFDB-225F1B92AC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{874417B1-E3AE-490D-BFDB-225F1B92AC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{874417B1-E3AE-490D-BFDB-225F1B92AC02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
