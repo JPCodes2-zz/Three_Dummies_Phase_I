@@ -43,7 +43,7 @@ namespace APIGateway.Models
             string requestContent;
             using Stream receiveStream = request.Body;
                 using StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
-                    requestContent = readStream.ReadToEnd();
+                    requestContent = await readStream.ReadToEndAsync();
 
             using var newRequest = new HttpRequestMessage(new HttpMethod(request.Method), CreateInternalFullUri(request));
                     newRequest.Content = new StringContent(requestContent, Encoding.UTF8, request.ContentType);
